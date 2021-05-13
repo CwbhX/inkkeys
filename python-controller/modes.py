@@ -20,7 +20,7 @@ from PIL import Image, ImageDraw, ImageFont
 from colorsys import hsv_to_rgb
 
 #Optional libraries you might want to remove if you do not require them.
-import pulsectl                                  # Get volume level in Linux, pip3 install pulsectl
+#import pulsectl                                  # Get volume level in Linux, pip3 install pulsectl
 from obswebsocket import obsws, requests, events # Control OBS. This requires the websocket plugin in OBS (https://github.com/Palakis/obs-websocket) and the Python library obs-websocket-py (pip3 install obs-websocket-py, https://github.com/Elektordi/obs-websocket-py)
 
 

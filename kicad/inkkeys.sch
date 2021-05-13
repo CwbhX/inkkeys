@@ -8372,4 +8372,48 @@ Text Notes 9600 3350 2    50   Italic 10
 RGB LEDs
 Text Notes 9600 2200 2    50   Italic 10
 OLED Connector
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 609FF5C5
+P 7950 5250
+F 0 "H1" H 8050 5296 50  0000 L CNN
+F 1 "MountingHole" H 8050 5205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7950 5250 50  0001 C CNN
+F 3 "~" H 7950 5250 50  0001 C CNN
+	1    7950 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H3
+U 1 1 609FFBDC
+P 8800 5250
+F 0 "H3" H 8900 5296 50  0000 L CNN
+F 1 "MountingHole" H 8900 5205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 8800 5250 50  0001 C CNN
+F 3 "~" H 8800 5250 50  0001 C CNN
+	1    8800 5250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 609FFE7B
+P 7950 5800
+F 0 "H2" H 8050 5846 50  0000 L CNN
+F 1 "MountingHole" H 8050 5755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 7950 5800 50  0001 C CNN
+F 3 "~" H 7950 5800 50  0001 C CNN
+	1    7950 5800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H4
+U 1 1 60A0010E
+P 8850 5800
+F 0 "H4" H 8950 5846 50  0000 L CNN
+F 1 "MountingHole" H 8950 5755 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3" H 8850 5800 50  0001 C CNN
+F 3 "~" H 8850 5800 50  0001 C CNN
+	1    8850 5800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

@@ -49,17 +49,6 @@ F 3 "" H 6300 2900 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:Rotary_Encoder_Switch SW11
-U 1 1 5FE26615
-P 5900 2000
-F 0 "SW11" H 5900 2367 50  0000 C CNN
-F 1 "Rotary_Encoder_Switch" H 5900 2276 50  0000 C CNN
-F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 5750 2160 50  0001 C CNN
-F 3 "~" H 5900 2260 50  0001 C CNN
-	1    5900 2000
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR09
 U 1 1 5FE2A9B7
 P 6300 3100
@@ -175,7 +164,7 @@ U 1 1 5FE6B5E5
 P 4850 1900
 F 0 "C1" V 4800 2000 50  0000 C CNN
 F 1 "10n" V 4800 1800 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4888 1750 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4888 1750 50  0001 C CNN
 F 3 "~" H 4850 1900 50  0001 C CNN
 	1    4850 1900
 	0    1    1    0   
@@ -186,7 +175,7 @@ U 1 1 5FE6F216
 P 4850 2100
 F 0 "C2" V 4800 2200 50  0000 C CNN
 F 1 "10n" V 4800 2000 50  0000 C CNN
-F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4888 1950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder" H 4888 1950 50  0001 C CNN
 F 3 "~" H 4850 2100 50  0001 C CNN
 	1    4850 2100
 	0    1    1    0   
@@ -8416,4 +8405,55 @@ F 3 "~" H 8850 5800 50  0001 C CNN
 	1    8850 5800
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J2
+U 1 1 60A1BEF4
+P 6000 1150
+F 0 "J2" V 5964 862 50  0000 R CNN
+F 1 "Conn_01x05" V 5873 862 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Horizontal" H 6000 1150 50  0001 C CNN
+F 3 "~" H 6000 1150 50  0001 C CNN
+	1    6000 1150
+	0    -1   -1   0   
+$EndComp
+Text Label 5600 1900 0    50   ~ 0
+RA
+Text Label 5900 1400 3    50   ~ 0
+RB
+Text Label 6000 1400 3    50   ~ 0
+RC
+Text Label 6100 1400 3    50   ~ 0
+RS1
+Text Label 6200 1400 3    50   ~ 0
+RS2
+Wire Wire Line
+	5800 1400 5800 1350
+Wire Wire Line
+	5900 1400 5900 1350
+Wire Wire Line
+	6000 1400 6000 1350
+Wire Wire Line
+	6100 1400 6100 1350
+Wire Wire Line
+	6200 1400 6200 1350
+Text Label 5800 1400 3    50   ~ 0
+RA
+Text Label 5600 2000 0    50   ~ 0
+RB
+Text Label 5600 2100 0    50   ~ 0
+RC
+Text Label 6200 1900 2    50   ~ 0
+RS1
+Text Label 6200 2100 2    50   ~ 0
+RS2
+Wire Notes Line
+	5550 1750 5550 2150
+Wire Notes Line
+	5550 2150 6300 2150
+Wire Notes Line
+	6300 2150 6300 1750
+Wire Notes Line
+	6300 1750 5550 1750
+Text Notes 5550 1750 0    50   ~ 0
+Rotary Encoder
 $EndSCHEMATC

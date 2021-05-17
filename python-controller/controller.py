@@ -31,7 +31,7 @@ print('I will try to stay connected. Press Ctrl+c to quit.')
 mqtt = InkkeysMqtt("None", DEBUG) #Set address to "None" if you do not want to use mqtt
 
 modes = [\
-            {"mode": ModeOBS(), "process": "obs"}, \
+            {"mode": PreForm(), "activeWindow": re.compile(".*PreForm.*")}, \
             {"mode": ModeBlender(), "activeWindow": re.compile("^Blender")}, \
             {"mode": ModeGimp(), "activeWindow": re.compile("^gimp.*")}, \
             {"mode": ModeFallback(mqtt)} \

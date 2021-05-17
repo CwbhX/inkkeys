@@ -10,7 +10,7 @@ Adafruit_NeoPixel leds = Adafruit_NeoPixel(N_LED, PIN_LED, NEO_RGB + NEO_KHZ400)
 
 void initLEDs() {
   leds.begin();
-  leds.setBrightness(100);
+  leds.setBrightness(25);
   leds.clear();
   leds.show();
   //IMPORTANT: The original hardware design cannot provide enough
@@ -48,4 +48,3 @@ void ledGreeting(int steps) {
   leds.clear();
   leds.show();
 }
-

@@ -39,7 +39,8 @@ Encoder rotary(PIN_ROTA, PIN_ROTB);
 long rotaryPosition = 0;  //Last position to keep track of changes
 
 //Display
-GxEPD2_290 display(/*CS=*/ PIN_CS, /*DC=*/ PIN_DC, /*RST=*/ PIN_RST, /*BUSY=*/ PIN_BUSY);
+//GxEPD2_290 display(/*CS=*/ PIN_CS, /*DC=*/ PIN_DC, /*RST=*/ PIN_RST, /*BUSY=*/ PIN_BUSY);
+GxEPD2_290_T94 display(/*CS=*/ PIN_CS, /*DC=*/ PIN_DC, /*RST=*/ PIN_RST, /*BUSY=*/ PIN_BUSY);
 
 //LEDs
 Adafruit_NeoPixel leds = Adafruit_NeoPixel(N_LED, PIN_LED, NEO_RGB + NEO_KHZ400);
@@ -57,7 +58,7 @@ void setup() {
   //Initialize LEDs first, for some reason they initialize blue
   //  after a power cycle which is pretty annoying.
   leds.begin();
-  leds.setBrightness(100);
+  leds.setBrightness(25);
   leds.clear();
   leds.show();
   //IMPORTANT: The original hardware design cannot provide enough
@@ -222,7 +223,7 @@ void checkRotaryEncoderAndReportChanges() {
     Serial.print(rotaryPosition);
     Serial.println(".");
 
-    demoBrightness = 255;
+    demoBrightness = 150;
   }
   if (demoBrightness > 0) {
     demoBrightness--;

@@ -19,9 +19,12 @@ from math import ceil, floor
 from PIL import Image, ImageDraw, ImageFont
 from colorsys import hsv_to_rgb
 
+import os
+os.add_dll_directory('C:/Windows/bin')
+
 #Optional libraries you might want to remove if you do not require them.
-import pulsectl                                  # Get volume level in Linux, pip3 install pulsectl
-from obswebsocket import obsws, requests, events # Control OBS. This requires the websocket plugin in OBS (https://github.com/Palakis/obs-websocket) and the Python library obs-websocket-py (pip3 install obs-websocket-py, https://github.com/Elektordi/obs-websocket-py)
+#import pulsectl                                  # Get volume level in Linux, pip3 install pulsectl
+#from obswebsocket import obsws, requests, events # Control OBS. This requires the websocket plugin in OBS (https://github.com/Palakis/obs-websocket) and the Python library obs-websocket-py (pip3 install obs-websocket-py, https://github.com/Elektordi/obs-websocket-py)
 
 
         ############# Simple example. For Blender we just set up a few key assignments with corresponding images.

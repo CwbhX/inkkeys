@@ -57,7 +57,7 @@ void setup() {
   //Initialize LEDs first, for some reason they initialize blue
   //  after a power cycle which is pretty annoying.
   leds.begin();
-  leds.setBrightness(100);
+  leds.setBrightness(25);
   leds.clear();
   leds.show();
   //IMPORTANT: The original hardware design cannot provide enough

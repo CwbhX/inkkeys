@@ -23,13 +23,16 @@ const byte ROT_FACTOR = 4;         //Smallest reported step, typically one "clic
 const byte ROT_CIRCLE_STEPS = 20;  //Rotary steps in a full circle
 
 //Keys
-const byte PIN_SW2 = 2;
-const byte PIN_SW3 = 3;
-const byte PIN_SW4 = 4;
-const byte PIN_SW5 = 5;
-const byte PIN_SW6 = 6;
-const byte PIN_SW7 = 7;
-const byte PIN_SW8 = 8;
-const byte PIN_SW9 = 9;
+const byte ROW_1 = 5;
+const byte ROW_2 = 6;
+const byte COL_1 = 7;
+const byte COL_2 = 8;
+const byte COL_3 = 9;
+const byte COL_4 = 10;
+const byte COL_5 = 11;
+
+//Slider
+const byte SLIDER_OUT = 12;
+
 
 const int DEBOUNCE_TIME = 50; //Debounce reject interval in milliseconds

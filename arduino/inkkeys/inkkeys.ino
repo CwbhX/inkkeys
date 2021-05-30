@@ -16,10 +16,15 @@
 #include <Adafruit_NeoPixel.h>  //Digital RGB LEDs
 
 //Keys
-const byte nSW = 9;
-const byte SW[] = {PIN_SW1, PIN_SW2, PIN_SW3, PIN_SW4, PIN_SW5, PIN_SW6, PIN_SW7, PIN_SW8, PIN_SW9}; //Array of switches for easy iteration
+const byte nSW = 11;
+// const byte SW[] = {PIN_SW1, PIN_SW2, PIN_SW3, PIN_SW4, PIN_SW5, PIN_SW6, PIN_SW7, PIN_SW8, PIN_SW9}; //Array of switches for easy iteration
+const byte ROWS[] = {ROW_1, ROW_2};
+const byte ROW_COUNT = sizeof(ROWS)/sizeof(ROWS[0]);
+const byte COLS[] = {COL_1, COL_2, COL_3, COL_4, COL_5};
+const byte COL_COUNT = sizeof(COLS)/sizeof(COLS[0]);
+
 bool pressed[] = {false, false, false, false, false, false, false, false, false}; //Last state of each key to track changes
-uint32_t swDebounce[] = {0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L};
+uint32_t swDebounce[] = {0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L, 0L};
 
 //Rotary encoder
 Encoder rotary(PIN_ROTA, PIN_ROTB);
@@ -49,9 +54,12 @@ void setup() {
   Serial.println("= InkKeys =");
   
   //Set pin modes for keys
-  for (int i = 0; i < nSW; i++) {
-    pinMode(SW[i], INPUT_PULLUP);
-  }
+    for(int x = 0; x < ROW_COUNT; x++) {
+        pinMode(rows[x], INPUT);
+    }
+    for (int x = 0; x < COL_COUNT; x++) {
+      pinMode(cols[x], INPUT_PULLUP);
+    }
 
   //Set rotary encoder to zero
   rotary.write(rotaryPosition);
@@ -127,3 +135,26 @@ void checkRotaryEncoderAndReportChanges() {
       executeEvents(assignments[9][1]);
   }
 }
+
+void readMatrix() {
+    // iterate the columns
+    for (int colIndex=0; colIndex < COL_COUNT; colIndex++) {
+        // col: set to output to low
+        byte curCol = COLS[colIndex];
+        pinMode(curCol, OUTPUT);
+        digitalWrite(curCol, LOW);
+ 
+        // row: interate through the rows
+        for (int rowIndex=0; rowIndex < ROW_COUNT; rowIndex++) {
+            byte rowCol = ROWS[rowIndex];
+            pinMode(rowCol, INPUT_PULLUP);
+            keys[colIndex][rowIndex] = digitalRead(rowCol);
+            pinMode(rowCol, INPUT);
+        }
+        // disable the column
+        pinMode(curCol, INPUT);
+    }
+}
+
+// CURRENT STATUS: 
+// I am trying to add the read matrix code i, I think I need the keys array, and then we'll need to add the "ok we got the right keys pressed, now activate the right events" bit in

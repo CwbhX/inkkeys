@@ -7558,17 +7558,6 @@ B5 34 C6 07 11 F1 02 95 53 DF E3 A5 93 FE ED 5D 03 A4 50 A3 D7 75 15 40 89 A9 12
 4E 44 AE 42 60 82 
 EndData
 $EndBitmap
-$Comp
-L Switch:SW_MEC_5G SW12
-U 1 1 60A0A159
-P 7150 3000
-F 0 "SW12" H 7150 3285 50  0000 C CNN
-F 1 "SW_MEC_5G" H 7150 3194 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 7150 3200 50  0001 C CNN
-F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=488" H 7150 3200 50  0001 C CNN
-	1    7150 3000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7400 3050 7400 3000
 Wire Wire Line
@@ -8456,4 +8445,15 @@ Wire Notes Line
 	6300 1750 5550 1750
 Text Notes 5550 1750 0    50   ~ 0
 Rotary Encoder
+$Comp
+L Switch:SW_Push SW12
+U 1 1 60B8E746
+P 7150 3000
+F 0 "SW12" H 7150 3285 50  0000 C CNN
+F 1 "SW_Push" H 7150 3194 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 7150 3200 50  0001 C CNN
+F 3 "~" H 7150 3200 50  0001 C CNN
+	1    7150 3000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

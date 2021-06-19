@@ -33,6 +33,8 @@ mqtt = InkkeysMqtt("None", DEBUG) #Set address to "None" if you do not want to u
 modes = [\
             {"mode": ModePreFormKnobs(), "activeWindow": re.compile(".*PreForm Knobs.*")}, \
             {"mode": ModePreForm(), "activeWindow": re.compile(".*PreForm - .*")}, \
+            {"mode": ModeBlender(), "activeWindow": re.compile("^Blender")}, \
+            {"mode": ModeGimp(), "activeWindow": re.compile("^gimp.*")}, \
             {"mode": ModeFallback(mqtt)} \
         ]
 

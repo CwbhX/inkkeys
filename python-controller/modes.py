@@ -32,7 +32,6 @@ os.add_dll_directory('C:/Windows/bin')
         ############# and you should get used to the real shortcuts as it is much more efficient to stay on the keyboard all the time.
 
 
-##########Preform - knob editor ################
 class ModePreFormKnobs:
     def activate(self, device):
 
@@ -40,7 +39,7 @@ class ModePreFormKnobs:
 
         #Button1 (Jog dial press) - Pressing F to home camera
         device.sendTextFor(1, "Tunas")
-        device.assignKey(KeyCode.SW1_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEYPAD_ENTER, ActionCode.PRESS)]) #Play/pause
+        device.assignKey(KeyCode.SW1_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEYPAD_ENTER, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW1_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEYPAD_ENTER, ActionCode.RELEASE)])
 
         #Jog dial rotation - Pressing + (CW) or - (CCW) to zoom in and out 
@@ -49,42 +48,42 @@ class ModePreFormKnobs:
 
         #Button2 (top left) - exit (q)
         device.sendIconFor(2, "icons/x-circle-fill.png")
-        device.assignKey(KeyCode.SW2_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_Q, ActionCode.PRESS)]) #Set view to camera
+        device.assignKey(KeyCode.SW2_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_Q, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW2_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_Q, ActionCode.RELEASE)])
 
         #Button3 (left, second from top) - clear (pressing x)
         device.sendIconFor(3, "icons/eraser-fill.png")
-        device.assignKey(KeyCode.SW3_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.PRESS)]) #Isolation view
+        device.assignKey(KeyCode.SW3_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW3_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_X, ActionCode.RELEASE)])
 
         #Button4 (left, third from top) import - (pressing i)
         device.sendIconFor(4, "icons/file-arrow-down.png")
-        device.assignKey(KeyCode.SW4_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_I, ActionCode.PRESS)]) #Not used, set to nothing.
+        device.assignKey(KeyCode.SW4_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_I, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW4_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_I, ActionCode.RELEASE)])
 
         #Button5 (bottom left) - apply (a)
         device.sendIconFor(5, "icons/check-circle-fill.png")
-        device.assignKey(KeyCode.SW5_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_A, ActionCode.PRESS)]) #Not used, set to nothing.
+        device.assignKey(KeyCode.SW5_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_A, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW5_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_A, ActionCode.RELEASE)])
 
         #Button6 (top right) - export - (pressing e)
         device.sendIconFor(6, "icons/file-arrow-up.png")
-        device.assignKey(KeyCode.SW6_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_E, ActionCode.PRESS)]) #Center on selection
+        device.assignKey(KeyCode.SW6_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_E, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW6_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_E, ActionCode.RELEASE)])
 
         #Button7 (right, second from top) - auto column S 
         device.sendIconFor(7, "icons/grid-fill.png")
-        device.assignKey(KeyCode.SW7_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_S, ActionCode.PRESS)]) #Render sequence
+        device.assignKey(KeyCode.SW7_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_S, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW7_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_S, ActionCode.RELEASE)])
 
         #Button8 (right, third from top) (printer list ctrl + shift + p)
         device.sendIconFor(8, "icons/printer-fill.png")
-        device.assignKey(KeyCode.SW8_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_SHIFT, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.PRESS)]) #Not used, set to nothing.
+        device.assignKey(KeyCode.SW8_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_SHIFT, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW8_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_SHIFT, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.RELEASE)])
 
         #Button9 (bottom right) - go down one layer
         device.sendIconFor(9, "icons/layers-half.png")
-        device.assignKey(KeyCode.SW9_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_DOWN, ActionCode.PRESS)]) #Not used, set to nothing.
+        device.assignKey(KeyCode.SW9_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_DOWN, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW9_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_DOWN, ActionCode.RELEASE)])
 
         device.updateDisplay()
@@ -98,9 +97,6 @@ class ModePreFormKnobs:
     def deactivate(self, device):
         pass            # Nothing to clean up in this example
 
-
-
-##########Preform ################
 class ModePreForm:
     def activate(self, device):
 
@@ -108,7 +104,7 @@ class ModePreForm:
 
         #Button1 (Jog dial press) - Pressing F to home camera
         device.sendTextFor(1, "Spice, flow")
-        device.assignKey(KeyCode.SW1_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_F, ActionCode.PRESS)]) #Play/pause
+        device.assignKey(KeyCode.SW1_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_F, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW1_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_F, ActionCode.RELEASE)])
 
         #Jog dial rotation - Pressing + (CW) or - (CCW) to zoom in and out 
@@ -117,42 +113,42 @@ class ModePreForm:
 
         #Button2 (top left) - supports (pressing C)
         device.sendIconFor(2, "icons/tree-fill.png")
-        device.assignKey(KeyCode.SW2_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_C, ActionCode.PRESS)]) #Set view to camera
+        device.assignKey(KeyCode.SW2_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_C, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW2_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_C, ActionCode.RELEASE)])
 
         #Button3 (left, second from top) - orientation (pressing O)
         device.sendIconFor(3, "icons/person-bounding-box.png")
-        device.assignKey(KeyCode.SW3_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_O, ActionCode.PRESS)]) #Isolation view
+        device.assignKey(KeyCode.SW3_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_O, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW3_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_O, ActionCode.RELEASE)])
 
         #Button4 (left, third from top) Print - ctrl + p
         device.sendIconFor(4, "icons/printer.png")
-        device.assignKey(KeyCode.SW4_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.PRESS)]) #Not used, set to nothing.
+        device.assignKey(KeyCode.SW4_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW4_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.RELEASE)])
 
         #Button5 (bottom left) - Go up one slice
         device.sendIconFor(5, "icons/layers-fill.png")
-        device.assignKey(KeyCode.SW5_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_UP, ActionCode.PRESS)]) #Not used, set to nothing.
+        device.assignKey(KeyCode.SW5_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_UP, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW5_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_UP, ActionCode.RELEASE)])
 
         #Button6 (top right) - edit supports (Pressing Ctrl + E)
         device.sendIconFor(6, "icons/aspect-ratio.png")
-        device.assignKey(KeyCode.SW6_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_E, ActionCode.PRESS)]) #Center on selection
+        device.assignKey(KeyCode.SW6_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_E, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW6_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_E, ActionCode.RELEASE)])
 
         #Button7 (right, second from top) - Turn knobs (ctrl + K)
         device.sendIconFor(7, "icons/speedometer.png")
-        device.assignKey(KeyCode.SW7_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_K, ActionCode.PRESS)]) #Render sequence
+        device.assignKey(KeyCode.SW7_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_K, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW7_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_K, ActionCode.RELEASE)])
 
         #Button8 (right, third from top) (printer list ctrl + shift + p)
         device.sendIconFor(8, "icons/printer-fill.png")
-        device.assignKey(KeyCode.SW8_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_SHIFT, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.PRESS)]) #Not used, set to nothing.
+        device.assignKey(KeyCode.SW8_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_SHIFT, ActionCode.PRESS), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW8_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_CTRL, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_LEFT_SHIFT, ActionCode.RELEASE), event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_P, ActionCode.RELEASE)])
 
         #Button9 (bottom right) - go down one layer
         device.sendIconFor(9, "icons/layers-half.png")
-        device.assignKey(KeyCode.SW9_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_DOWN, ActionCode.PRESS)]) #Not used, set to nothing.
+        device.assignKey(KeyCode.SW9_PRESS, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_DOWN, ActionCode.PRESS)])
         device.assignKey(KeyCode.SW9_RELEASE, [event(DeviceCode.KEYBOARD, KeyboardKeycode.KEY_PAGE_DOWN, ActionCode.RELEASE)])
 
         device.updateDisplay()
@@ -165,7 +161,6 @@ class ModePreForm:
 
     def deactivate(self, device):
         pass            # Nothing to clean up in this example
-
 
 class ModeBlender:
 
